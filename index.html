@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UK Clinical AI Learning Directory | Courses for Healthcare Professionals</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            clinical: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-200 min-h-screen flex flex-col">
+
+  <!-- Header / Hero -->
+  <header class="bg-gradient-to-r from-teal-800 via-teal-700 to-emerald-800 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex justify-between items-start md:items-center flex-col md:flex-row gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-900/50 border border-teal-400/30 text-teal-100 text-xs font-medium mb-3">
+            <span>🫀 UK Clinical Practice & Digital Health</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">
+            AI Courses for UK Healthcare Professionals
+          </h1>
+          <p class="mt-2 text-teal-100 max-w-3xl text-base sm:text-lg">
+            A curated directory of foundation e-learning, CPD-accredited primary & secondary care workshops, clinical fellowships, and postgraduate degrees in Artificial Intelligence.
+          </p>
+        </div>
+        <button id="themeToggle" class="self-end md:self-auto px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 text-sm font-medium backdrop-blur-sm transition flex items-center gap-2">
+          <span id="themeIcon">🌙</span>
+          <span id="themeText">Dark Mode</span>
+        </button>
+      </div>
+
+      <!-- Quick Stats Bar -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-6 border-t border-teal-600/50 text-center sm:text-left">
+        <div>
+          <span class="block text-2xl font-bold" id="totalCount">16</span>
+          <span class="text-xs text-teal-200 uppercase tracking-wider">Curated Programmes</span>
+        </div>
+        <div>
+          <span class="block text-2xl font-bold">5 Core Areas</span>
+          <span class="text-xs text-teal-200 uppercase tracking-wider">Safety, Data, Ethics, Care & Ops</span>
+        </div>
+        <div>
+          <span class="block text-2xl font-bold">Free & Funded</span>
+          <span class="text-xs text-teal-200 uppercase tracking-wider">E-Learning & Fellowships</span>
+        </div>
+        <div>
+          <span class="block text-2xl font-bold">CPD & Postgrad</span>
+          <span class="text-xs text-teal-200 uppercase tracking-wider">Appraisal & Revalidation Ready</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full">
+
+    <!-- Core Capability Pillars Banner -->
+    <section class="mb-8 bg-white dark:bg-slate-800 rounded-xl p-5 shadow-sm border border-slate-200 dark:border-slate-700">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-400 mb-3">
+        🫀 Key Clinical AI Capability Pillars in UK Healthcare
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs">
+        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-700/50 border border-slate-100 dark:border-slate-700">
+          <strong class="block text-slate-900 dark:text-white mb-1">1. Clinical Safety & Risk</strong>
+          Understanding DCB0129/DCB0160 safety standards, human-in-the-loop oversight, and spotting hallucinations.
+        </div>
+        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-700/50 border border-slate-100 dark:border-slate-700">
+          <strong class="block text-slate-900 dark:text-white mb-1">2. Patient-Centred Care</strong>
+          Communicating AI use transparently to patients, obtaining informed consent, and preserving clinical empathy.
+        </div>
+        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-700/50 border border-slate-100 dark:border-slate-700">
+          <strong class="block text-slate-900 dark:text-white mb-1">3. Ethics, Law & Regulation</strong>
+          Navigating MHRA software as a medical device (SaMD) rules, NICE evaluation frameworks, and medico-legal liability.
+        </div>
+        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-700/50 border border-slate-100 dark:border-slate-700">
+          <strong class="block text-slate-900 dark:text-white mb-1">4. Health Data Governance</strong>
+          Protecting patient confidentiality, information governance, GDPR compliance, and mitigating algorithmic bias.
+        </div>
+        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-700/50 border border-slate-100 dark:border-slate-700">
+          <strong class="block text-slate-900 dark:text-white mb-1">5. Implementation & QI</strong>
+          Planning, evaluating, and auditing AI workflows in Primary Care Networks, general practice, and hospitals.
+        </div>
+      </div>
+    </section>
+
+    <!-- Search and Filter Controls -->
+    <section class="mb-8 space-y-4">
+      <div class="flex flex-col md:flex-row gap-4">
+        <!-- Search Input -->
+        <div class="relative flex-grow">
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search by keyword (e.g., Primary Care, Pharmacist, Safety, MSc, Generative AI, Free)..." 
+            class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-teal-500 focus:outline-none shadow-sm text-sm"
+          >
+          <svg class="w-5 h-5 text-slate-400 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+
+        <!-- Cost Filter -->
+        <select id="costFilter" class="px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-teal-500 focus:outline-none shadow-sm text-sm">
+          <option value="all">All Funding / Costs</option>
+          <option value="Free">Free / Open Access</option>
+          <option value="Funded">Funded Fellowship</option>
+          <option value="Paid">Paid / Self- or Employer-Funded</option>
+        </select>
+      </div>
+
+      <!-- Category Pills -->
+      <div class="flex flex-wrap gap-2" id="categoryButtons">
+        <button data-category="all" class="cat-btn active px-4 py-2 rounded-full text-xs font-semibold bg-teal-700 text-white shadow-sm transition">
+          All Categories
+        </button>
+        <button data-category="Foundation & E-Learning" class="cat-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-teal-500 transition">
+          Foundation & Free E-Learning
+        </button>
+        <button data-category="Primary Care & Practical CPD" class="cat-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-teal-500 transition">
+          Primary Care & Practical CPD
+        </button>
+        <button data-category="Clinical Safety & Governance" class="cat-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-teal-500 transition">
+          Clinical Safety & Governance
+        </button>
+        <button data-category="Fellowships & Leadership" class="cat-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-teal-500 transition">
+          Fellowships & Leadership
+        </button>
+        <button data-category="University Postgraduate (MSc/PGCert)" class="cat-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-teal-500 transition">
+          University Postgraduate (MSc/PGCert)
+        </button>
+      </div>
+    </section>
+
+    <!-- Results Counter -->
+    <div class="mb-4 flex justify-between items-center text-xs text-slate-500 dark:text-slate-400">
+      <span id="resultsStatus">Showing all courses</span>
+      <button id="resetFilters" class="text-teal-600 dark:text-teal-400 hover:underline hidden">Reset filters</button>
+    </div>
+
+    <!-- Course Grid -->
+    <div id="courseGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Populated dynamically by JavaScript -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden text-center py-16 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+      <p class="text-lg font-medium text-slate-700 dark:text-slate-300">No courses match your current filters.</p>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Try clearing your search term or selecting "All Categories".</p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 mt-16 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div>
+        <span class="font-semibold text-slate-700 dark:text-slate-200">🫀 UK Clinical AI Learning Directory</span> — Designed for Doctors, Pharmacists, Pharmacy Technicians, Nurses, and AHPs.
+      </div>
+      <div>
+        Hosted on GitHub Pages • Always verify latest cohort dates and CPD accreditation with course providers.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Course Data & Interactive Script -->
+  <script>
+    const courses = [
+      {
+        title: "Artificial Intelligence (AI) Learning Hub Catalogue",
+        provider: "Learning Hub / Digital Academy",
+        category: "Foundation & E-Learning",
+        cost: "Free",
+        costDetail: "Free (Open to UK Health & Care Staff)",
+        duration: "Self-paced (Bite-sized modules)",
+        format: "Online E-Learning",
+        audience: "All healthcare professionals, digital leads, and beginners",
+        description: "Curated learning catalogue mapped to the AI and Digital Healthcare Technologies Capability Framework. Covers generative AI fundamentals, ethical and regulatory considerations, data bias, and caring for patients with digital technology.",
+        tags: ["Generative AI", "Capability Framework", "Ethics", "Foundation"],
+        url: "https://learninghub.nhs.uk/catalogue/ai"
+      },
+      {
+        title: "An Introduction to AI for Healthcare Professionals",
+        provider: "e-Learning for Healthcare (elfh)",
+        category: "Foundation & E-Learning",
+        cost: "Free",
+        costDetail: "Free (Health & Care email login)",
+        duration: "1–2 Hours",
+        format: "Online Interactive Module",
+        audience: "Clinicians, Pharmacists, Pharmacy Technicians, Nurses, AHPs",
+        description: "Explores core concepts in artificial intelligence and machine learning (ML) relevant to clinical care, alongside responsible AI adoption principles, data governance, and real-world diagnostic examples.",
+        tags: ["Machine Learning", "Responsible AI", "Self-Assessment", "CPD"],
+        url: "https://portal.e-lfh.org.uk/"
+      },
+      {
+        title: "AI Essentials for Primary Care",
+        provider: "Contemporary Health (CCH)",
+        category: "Primary Care & Practical CPD",
+        cost: "Paid",
+        costDetail: "£49–£79",
+        duration: "3.5 Hours (3.5 CPD Hours)",
+        format: "100% Online On-Demand",
+        audience: "GPs, Clinical Pharmacists, Pharmacy Technicians, Practice Nurses, PCN Staff",
+        description: "Practical governance and workflow training tailored to UK primary care. Includes the SAFER Evaluation Framework for AI in Primary Care, pre-implementation safety checklists, triage & documentation aids, and appraisal-ready reflection templates.",
+        tags: ["Primary Care", "PCN", "SAFER Framework", "Workflows", "CPD Accredited"],
+        url: "https://www.contemporaryhealth.co.uk/ai-course-for-primary-care-cpd/"
+      },
+      {
+        title: "AI-Rx: Essential AI for Clinicians",
+        provider: "DREEAM (Nottingham QMC) / ClinicianOS",
+        category: "Primary Care & Practical CPD",
+        cost: "Paid",
+        costDetail: "Paid (Study budget eligible)",
+        duration: "1 Day (09:30 – 16:30)",
+        format: "Face-to-Face (UK) & Live Online",
+        audience: "Clinicians, Medical & Healthcare Educators, Clinical Leaders",
+        description: "Hands-on, tool-based CPD workshop covering safe and ethical Generative AI use for clinical letters, discharge summaries, clinical audits, Quality Improvement (QI) projects, research, and healthcare teaching.",
+        tags: ["Generative AI", "Audits & QI", "Medical Education", "Documentation"],
+        url: "https://www.dreeam.ac.uk/courses/ai-rx-essential-ai-clinicians"
+      },
+      {
+        title: "Digital Clinical Safety Officer (DCSO) Training",
+        provider: "e-Learning for Healthcare (elfh) & Digital Safety Team",
+        category: "Clinical Safety & Governance",
+        cost: "Free",
+        costDetail: "Free (E-learning part) / Paid Live Assessment",
+        duration: "Self-paced + 1 Day Workshop",
+        format: "Blended Online",
+        audience: "Clinicians overseeing digital health or clinical AI deployment",
+        description: "Essential training on clinical risk management standards (DCB0129 and DCB0160). Crucial for any healthcare professional involved in procuring, evaluating, or governing AI tools in primary or secondary care.",
+        tags: ["DCB0129", "DCB0160", "Clinical Safety", "Risk Management", "Governance"],
+        url: "https://www.e-lfh.org.uk/programmes/digital-clinical-safety/"
+      },
+      {
+        title: "KCL Innovation Scholars: AI Modules for Healthcare",
+        provider: "King's College London (KCL)",
+        category: "Foundation & E-Learning",
+        cost: "Free",
+        costDetail: "Free Open Access",
+        duration: "3 Short Modules",
+        format: "Online Self-Paced",
+        audience: "Healthcare professionals, clinical researchers, and trainees",
+        description: "Three dedicated e-learning modules focusing on evidence-based medicine in the era of big data, large-scale clinical datasets, and applying artificial intelligence to improve patient care pathways.",
+        tags: ["King's College London", "Evidence-Based Medicine", "Health Data"],
+        url: "https://afcai.org/education/"
+      },
+      {
+        title: "Fellowship in Clinical Artificial Intelligence",
+        provider: "National Clinical AI Fellowship Team (Guy's & St Thomas' / UK Partners)",
+        category: "Fellowships & Leadership",
+        cost: "Funded",
+        costDetail: "Funded (Salary support / Less-than-full-time placement)",
+        duration: "12 Months (0.4 FTE)",
+        format: "Hybrid Project Placement + Masterclasses",
+        audience: "Doctors, Pharmacists, Healthcare Scientists, Nurses, AHPs, Midwives",
+        description: "The flagship UK national fellowship equipping clinicians to lead the deployment, safety validation, and evaluation of AI software in real-world clinical settings alongside multidisciplinary AI teams.",
+        tags: ["Clinical AI Deployment", "Leadership", "National Fellowship", "Project-Based"],
+        url: "https://www.nhsfellowship.ai/"
+      },
+      {
+        title: "Topol Digital Fellowship",
+        provider: "Digital Academy",
+        category: "Fellowships & Leadership",
+        cost: "Funded",
+        costDetail: "Funded (Bursary + Protected Time)",
+        duration: "12 Months",
+        format: "Workshops + Workplace Digital Project",
+        audience: "All health and social care professionals (including Primary Care & Pharmacy)",
+        description: "Provides healthcare professionals with protected time, mentorship, and structured training in AI, machine learning, human-centred design, and data governance to lead a digital transformation or QI project in their organisation.",
+        tags: ["Topol Review", "Quality Improvement", "Service Transformation", "Leadership"],
+        url: "https://topol.hee.nhs.uk/digital-fellowships/"
+      },
+      {
+        title: "Clinical Entrepreneur Programme (CEP)",
+        provider: "Anglia Ruskin University / National Innovation Team",
+        category: "Fellowships & Leadership",
+        cost: "Free",
+        costDetail: "Free (Competitive Application)",
+        duration: "12 Months",
+        format: "Pitstops, Mentoring & Webinars",
+        audience: "Clinical and non-clinical healthcare staff with an AI or digital innovation idea",
+        description: "Workforce development programme supporting clinicians to develop and scale innovative solutions—heavily featuring clinical AI, decision support, and digital health tools—while staying in clinical practice.",
+        tags: ["Entrepreneurship", "Innovation", "MedTech", "Mentoring"],
+        url: "https://nhscep.com/"
+      },
+      {
+        title: "MSc Artificial Intelligence Implementation (Healthcare)",
+        provider: "University of Birmingham",
+        category: "University Postgraduate (MSc/PGCert)",
+        cost: "Paid",
+        costDetail: "Standard UK Postgraduate Tuition Fees",
+        duration: "1 Year Full-Time / 2 Years Part-Time",
+        format: "Campus / Blended",
+        audience: "Clinicians, Pharmacists, Health Managers, Digital Leads",
+        description: "The UK's first taught MSc focused specifically on the practical implementation of AI in healthcare. Covers clinical evaluation, regulatory approval (MHRA/NICE), data ethics, health economics, and real-world system deployment.",
+        tags: ["MSc", "Implementation Science", "Regulation", "Governance"],
+        url: "https://www.birmingham.ac.uk/postgraduate/courses/taught/med/ai-implementation-healthcare.aspx"
+      },
+      {
+        title: "MSc AI for Biomedicine and Healthcare",
+        provider: "University College London (UCL)",
+        category: "University Postgraduate (MSc/PGCert)",
+        cost: "Paid",
+        costDetail: "Standard UK Postgraduate Tuition Fees",
+        duration: "1 Year Full-Time",
+        format: "In-Person (London)",
+        audience: "Clinicians with quantitative interest, biomedical scientists, health data analysts",
+        description: "Bridges foundational machine learning, natural language processing (NLP), and deep learning methodologies with direct clinical applications in electronic health records, diagnostics, and therapeutics.",
+        tags: ["MSc", "UCL", "NLP", "Clinical Data Science"],
+        url: "https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/artificial-intelligence-biomedicine-and-healthcare-msc"
+      },
+      {
+        title: "MSc AI for Medicine and Health",
+        provider: "University of Bristol",
+        category: "University Postgraduate (MSc/PGCert)",
+        cost: "Paid",
+        costDetail: "Standard UK Postgraduate Tuition Fees",
+        duration: "1 Year Full-Time / Part-Time options",
+        format: "In-Person (Bristol)",
+        audience: "Healthcare professionals, medical researchers, and STEM graduates",
+        description: "Clinically grounded postgraduate degree from Bristol Medical School focusing on applying data science and AI safely and effectively to medical diagnostics, epidemiology, and patient care pathways.",
+        tags: ["MSc", "Medical School", "Diagnostics", "Clinical Research"],
+        url: "https://www.bristol.ac.uk/study/postgraduate/taught/msc-artificial-intelligence-for-medicine-and-health/"
+      },
+      {
+        title: "MSc / PGCert Diagnostics, Data and Digital Health",
+        provider: "University of Warwick",
+        category: "University Postgraduate (MSc/PGCert)",
+        cost: "Paid",
+        costDetail: "Modular / Postgraduate Tuition Fees",
+        duration: "1–3 Years (PGCert, PGDip, or MSc)",
+        format: "Flexible / Blended",
+        audience: "Working healthcare professionals, pharmacists, pathologists, and clinicians",
+        description: "Flexible postgraduate programme examining data-driven diagnostics, digital health technologies, and the integration of AI decision-support tools into modern clinical pathways.",
+        tags: ["PGCert", "PGDip", "MSc", "Diagnostics", "Flexible Learning"],
+        url: "https://warwick.ac.uk/study/postgraduate/courses/diagnostics-data-digital-health/"
+      },
+      {
+        title: "Artificial Intelligence in Healthcare (Online Short Course)",
+        provider: "Royal College of Surgeons in Ireland (RCSI) / FutureLearn",
+        category: "Primary Care & Practical CPD",
+        cost: "Free",
+        costDetail: "Free audit / Small fee for CPD certificate",
+        duration: "3–4 Weeks (2–3 hrs/week)",
+        format: "100% Online Self-Paced",
+        audience: "All practicing clinicians and healthcare educators",
+        description: "Accessible short course exploring how AI is transforming clinical decision-making, population health management, and workflow automation, with reflection on ethical and professional responsibilities.",
+        tags: ["Short Course", "Decision Support", "Population Health", "CPD"],
+        url: "https://afcai.org/education/"
+      },
+      {
+        title: "Revolutionizing Healthcare: Machine Learning for Clinicians",
+        provider: "Van der Schaar Lab (University of Cambridge)",
+        category: "Foundation & E-Learning",
+        cost: "Free",
+        costDetail: "Free (CPD-certified live & recorded sessions)",
+        duration: "Ongoing Monthly Sessions (1 Hour each)",
+        format: "Online Webinars & Interactive Archive",
+        audience: "Clinicians, Pharmacists, Medical Students, and Clinical Researchers",
+        description: "An ongoing, CPD-accredited educational series hosted by the Cambridge Centre for AI in Medicine. Designed specifically for clinicians with no coding background to engage with cutting-edge ML in risk prediction, personalised medicine, and trials.",
+        tags: ["Cambridge", "Personalised Medicine", "Risk Prediction", "Free CPD"],
+        url: "https://www.vanderschaar-lab.com/engagement-sessions/revolutionizing-healthcare/"
+      },
+      {
+        title: "AI and Digital Regulations Service & Guidance Hub",
+        provider: "NICE, MHRA, HRA & CQC Collaborative",
+        category: "Clinical Safety & Governance",
+        cost: "Free",
+        costDetail: "Free Public Resource",
+        duration: "Self-guided Reference & Case Studies",
+        format: "Online Knowledge & Regulatory Hub",
+        audience: "Clinical Leads, PCN Clinical Directors, Governance Leads, Adopters",
+        description: "Official UK multi-agency guidance hub for adopters and developers of health AI. Essential reading for understanding NICE Evidence Standards Framework (ESF) for digital health technologies and MHRA compliance before adopting AI in practice.",
+        tags: ["NICE Guidance", "MHRA", "CQC", "Evidence Standards", "Procurement"],
+        url: "https://www.digitalregulations.innovation.nhs.uk/"
+      }
+    ];
+
+    const courseGrid = document.getElementById('courseGrid');
+    const searchInput = document.getElementById('searchInput');
+    const costFilter = document.getElementById('costFilter');
+    const categoryButtons = document.querySelectorAll('.cat-btn');
+    const resultsStatus = document.getElementById('resultsStatus');
+    const resetFiltersBtn = document.getElementById('resetFilters');
+    const emptyState = document.getElementById('emptyState');
+    const totalCountEl = document.getElementById('totalCount');
+
+    let activeCategory = 'all';
+
+    totalCountEl.textContent = courses.length;
+
+    function getCostBadgeClasses(cost) {
+      if (cost === 'Free') return 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300 border-emerald-200 dark:border-emerald-700';
+      if (cost === 'Funded') return 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 border-blue-200 dark:border-blue-700';
+      return 'bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-300 border-amber-200 dark:border-amber-700';
+    }
+
+    function renderCourses() {
+      const query = searchInput.value.toLowerCase().trim();
+      const selectedCost = costFilter.value;
+
+      const filtered = courses.filter(course => {
+        const matchesCategory = activeCategory === 'all' || course.category === activeCategory;
+        const matchesCost = selectedCost === 'all' || course.cost === selectedCost;
+        const searchableText = `${course.title} ${course.provider} ${course.description} ${course.audience} ${course.tags.join(' ')}`.toLowerCase();
+        const matchesQuery = !query || searchableText.includes(query);
+
+        return matchesCategory && matchesCost && matchesQuery;
+      });
+
+      courseGrid.innerHTML = '';
+
+      if (filtered.length === 0) {
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+        filtered.forEach(course => {
+          const card = document.createElement('article');
+          card.className = 'bg-white dark:bg-slate-800 rounded-xl shadow-sm hover:shadow-md transition border border-slate-200 dark:border-slate-700 flex flex-col justify-between p-6';
+
+          const tagsHtml = course.tags.map(tag => 
+            `<span class="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">${tag}</span>`
+          ).join('');
+
+          card.innerHTML = `
+            <div>
+              <div class="flex justify-between items-start gap-2 mb-3">
+                <span class="text-xs font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-wider">
+                  ${course.category}
+                </span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold border ${getCostBadgeClasses(course.cost)} shrink-0">
+                  ${course.cost}
+                </span>
+              </div>
+
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-snug mb-1">
+                ${course.title}
+              </h3>
+              <p class="text-xs font-medium text-slate-500 dark:text-slate-400 mb-3">
+                🏛️ ${course.provider}
+              </p>
+
+              <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                ${course.description}
+              </p>
+
+              <div class="space-y-1.5 text-xs text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-700/40 p-3 rounded-lg mb-4 border border-slate-100 dark:border-slate-700">
+                <div><strong class="text-slate-800 dark:text-slate-200">👥 Target Audience:</strong> ${course.audience}</div>
+                <div><strong class="text-slate-800 dark:text-slate-200">⏱️ Duration:</strong> ${course.duration} (${course.format})</div>
+                <div><strong class="text-slate-800 dark:text-slate-200">💷 Funding / Cost:</strong> ${course.costDetail}</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                ${tagsHtml}
+              </div>
+              <a href="${course.url}" target="_blank" rel="noopener noreferrer" 
+                 class="w-full inline-flex justify-center items-center gap-1.5 px-4 py-2.5 rounded-lg text-xs font-semibold bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 dark:hover:text-white border border-teal-200 dark:border-teal-700/60 transition">
+                <span>View Course / Resource</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </a>
+            </div>
+          `;
+          courseGrid.appendChild(card);
+        });
+      }
+
+      // Update status text
+      const isFiltered = activeCategory !== 'all' || selectedCost !== 'all' || query !== '';
+      resultsStatus.textContent = `Showing ${filtered.length} of ${courses.length} programmes`;
+      if (isFiltered) {
+        resetFiltersBtn.classList.remove('hidden');
+      } else {
+        resetFiltersBtn.classList.add('hidden');
+      }
+    }
+
+    // Category Button Listeners
+    categoryButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryButtons.forEach(b => {
+          b.classList.remove('bg-teal-700', 'text-white');
+          b.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+        });
+        btn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+        btn.classList.add('bg-teal-700', 'text-white');
+
+        activeCategory = btn.getAttribute('data-category');
+        renderCourses();
+      });
+    });
+
+    // Search & Cost Listeners
+    searchInput.addEventListener('input', renderCourses);
+    costFilter.addEventListener('change', renderCourses);
+
+    // Reset Filters
+    resetFiltersBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      costFilter.value = 'all';
+      categoryButtons[0].click();
+    });
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      themeIcon.textContent = isDark ? '☀️' : '🌙';
+      themeText.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    });
+
+    // Initial render
+    renderCourses();
+  </script>
+</body>
+</html>
